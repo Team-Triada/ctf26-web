@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #3b0000;
+  --color-brand-accent: #e01b24;
+  --color-brand-light: #fca5a5;
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* ─── Force fonts everywhere ────────────────────────────────────────────── */
+
+/* Space Grotesk: all body-level text */
+body,
+p,
+span,
+a,
+li,
+td,
+th,
+button,
+input,
+select,
+textarea,
+label,
+div,
+section,
+nav,
+footer,
+header,
+aside,
+main {
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+}
+
+/* Instrument Serif: all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+  font-weight: 400;
+}
+
+/* Spans inside headings must inherit Instrument Serif, not get Space Grotesk */
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  font-family: inherit !important;
+}
+
+/* Tailwind font-serif class must resolve to Instrument Serif */
+.font-serif {
+  font-family: 'Instrument Serif', Georgia, serif !important;
+}
+
+/* Tailwind font-sans class must resolve to Space Grotesk */
+.font-sans {
+  font-family: 'Space Grotesk', system-ui, sans-serif !important;
+}
+
+/* ─── Base styles ────────────────────────────────────────────────────────── */
+
+body {
+  background-color: #101010;
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+  /* Zenith-style dot grid */
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+::selection {
+  background: var(--color-brand-accent);
+  color: white;
+}
+
+/* Technos font for navbar logo */
+.triada-logo,
+.triada-logo span {
+  font-family: 'Technos', sans-serif !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* ─── Typography Scaling ─────────────────────────────────────────────────── */
+
+h1 {
+  font-size: clamp(2.5rem, 6vw + 1rem, 7rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw + 0.5rem, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: clamp(1.1rem, 1.5vw + 0.25rem, 1.6rem);
+  line-height: 1.2;
+}
