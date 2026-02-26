@@ -91,7 +91,7 @@ export default function Rules() {
                     <div className="space-y-3">
                         {[
                             { q: "Do I need prior CTF experience?", a: "No. Beginners are absolutely welcome and encouraged to learn!" },
-                            { q: "Can I participate solo?", a: "No. Teams must have exactly 2 members to participate in the Duo Format." },
+                            { q: "Can I participate solo?", a: "Yes! Both solos and duos are welcome. You can enter alone or with a partner — the format is open to teams of 1 or 2 members." },
                             { q: "Is internet access allowed?", a: "Event guidelines will clarify allowed resources during the opening briefing." },
                             { q: "What should I bring?", a: "Laptop, charger, curiosity, and stamina." }
                         ].map((faq, i) => (
