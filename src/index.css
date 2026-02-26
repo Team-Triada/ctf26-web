@@ -120,6 +120,7 @@ h3 {
 .pullup-card {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   border-radius: 2rem;
   padding: 6rem 2rem;
   max-width: 72rem;
@@ -156,7 +157,7 @@ h3 {
   background-color: white;
   color: #0a0a0a;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 0.5rem;
 }
 
@@ -164,6 +165,11 @@ h3 {
   background-color: #f0f0f0;
   transform: scale(1.04);
   box-shadow: 0 0 30px rgba(224, 27, 36, 0.25);
+}
+
+.pullup-btn:focus-visible {
+  outline: 2px solid #e01b24;
+  outline-offset: 3px;
 }
 
 /* ─── Mobile Responsive ──────────────────────────────────────────────────── */
