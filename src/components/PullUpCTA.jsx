@@ -25,7 +25,7 @@ export default function PullUpCTA() {
                     </h2>
 
                     <p className="text-base md:text-lg text-white/50 font-light leading-relaxed max-w-md">
-                        24 hours. Real-world challenges. Two-member teams.
+                        24 hours. Real-world challenges. Solo or Duo teams.
                         Prove your skills at the biggest offline CTF of 2026.
                     </p>
 

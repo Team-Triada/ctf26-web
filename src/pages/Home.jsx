@@ -31,7 +31,7 @@ export default function Home() {
                     </motion.h1>
 
                     <motion.p variants={fadeInUp} className="text-base md:text-lg text-white/50 max-w-md mx-auto mb-10 font-light leading-relaxed">
-                        A 24-hour offline Capture The Flag competition. Team-based. Skill-first. No gimmicks.
+                        A 24-hour offline Capture The Flag competition. Solo & Team-based. Skill-first. No gimmicks.
                     </motion.p>
 
                     {/* Meta pills */}
