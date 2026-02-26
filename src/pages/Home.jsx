@@ -64,8 +64,8 @@ export default function Home() {
                         {[
                             {
                                 icon: <Users className="w-4 h-4 text-red-400" />,
-                                title: "Duo Format",
-                                desc: "Strictly a 2-member team format. Bring your laptops and your best ally."
+                                title: "Solo / Duo Format",
+                                desc: "Compete solo or as a 2-member team. Bring your laptops — and your best ally if you have one."
                             },
                             {
                                 icon: <Clock className="w-4 h-4 text-red-400" />,
