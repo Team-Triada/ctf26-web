@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import LightRays from './components/LightRays';
 import { Terminal, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Rules from './pages/Rules';
+import PullUpCTA from './components/PullUpCTA';
 
 function Navigation() {
   const location = useLocation();
@@ -86,6 +87,14 @@ function Navigation() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 function Footer() {
   return (
     <footer className="border-t border-white/[0.07] py-8 px-5 md:px-10 relative z-10">
@@ -127,6 +136,7 @@ function App() {
         </div>
 
         <Navigation />
+        <ScrollToTop />
 
         <main className="flex-grow pt-20 md:pt-24">
           <Routes>
@@ -134,6 +144,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/rules" element={<Rules />} />
           </Routes>
+          <PullUpCTA />
         </main>
 
         <Footer />

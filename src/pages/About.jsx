@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
@@ -12,6 +12,7 @@ const staggerContainer = {
 };
 
 export default function About() {
+    useEffect(() => { document.title = "About Triada CTF '26 — Cybersecurity CTF Competition | TRIADA"; }, []);
     return (
         <div className="px-5 md:px-10 relative z-10">
             <motion.div initial="hidden" animate="visible" variants={staggerContainer}>
@@ -21,8 +22,8 @@ export default function About() {
                     <motion.p variants={fadeInUp} className="text-xs tracking-[0.25em] uppercase text-white/40 mb-3">
                         The Competition
                     </motion.p>
-                    <motion.h1 variants={fadeInUp} className="text-white mb-5">
-                        About TRIADA CTF '26
+                    <motion.h1 variants={fadeInUp} className="text-white mb-5 whitespace-nowrap">
+                        About <span className="text-red-500">Triada</span> CTF '26
                     </motion.h1>
                     <motion.p variants={fadeInUp} className="text-base text-white/50 font-light leading-relaxed">
                         A 24-hour offline cybersecurity competition designed for students passionate about ethical hacking, problem solving, and hands-on security challenges.
@@ -75,18 +76,7 @@ export default function About() {
                     </motion.div>
                 </div>
 
-                {/* Participate CTA */}
-                <motion.div variants={fadeInUp} className="py-16 md:py-20 border-t border-white/[0.07]">
-                    <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-3">Open to all</p>
-                    <h2 className="text-white mb-4">Who Can Participate?</h2>
-                    <p className="text-sm text-white/50 mb-8 max-w-md font-light leading-relaxed">
-                        Open to university and college students, cybersecurity enthusiasts, learners, and experienced players alike.
-                    </p>
-                    <a href="https://ctf.triada.in"
-                        className="inline-flex items-center gap-2 px-7 py-3 bg-white text-black hover:bg-red-600 hover:text-white transition-colors duration-300 rounded-full text-sm font-bold tracking-[0.1em] uppercase">
-                        Register Your Duo →
-                    </a>
-                </motion.div>
+
 
             </motion.div>
         </div>

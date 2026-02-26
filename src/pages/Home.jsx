@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Shield, Trophy, MapPin, Users } from 'lucide-react';
+import { Calendar, Clock, Shield, MapPin, Users } from 'lucide-react';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 24 },
@@ -13,6 +13,7 @@ const staggerContainer = {
 };
 
 export default function Home() {
+    useEffect(() => { document.title = "TRIADA CTF '26 — 24-Hour Offline Capture The Flag Competition | April 2026"; }, []);
     return (
         <>
             {/* Hero Section — moved up with less top padding */}

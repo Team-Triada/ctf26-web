@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const fadeInUp = {
@@ -12,6 +12,7 @@ const staggerContainer = {
 };
 
 export default function Rules() {
+    useEffect(() => { document.title = "Rules & FAQ — TRIADA CTF '26 | Competition Guidelines"; }, []);
     return (
         <div className="px-5 md:px-10 relative z-10">
             <motion.div initial="hidden" animate="visible" variants={staggerContainer}>

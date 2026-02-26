@@ -93,7 +93,7 @@ body {
   font-family: 'Technos', sans-serif !important;
   font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.08em;
 }
 
 /* ─── Typography Scaling ─────────────────────────────────────────────────── */
@@ -113,4 +113,64 @@ h2 {
 h3 {
   font-size: clamp(1.1rem, 1.5vw + 0.25rem, 1.6rem);
   line-height: 1.2;
+}
+
+/* ─── Pull-Up CTA Card ──────────────────────────────────────────────────── */
+
+.pullup-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  padding: 6rem 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  background-color: #171717;
+  background-image:
+    radial-gradient(55% 100% at 50% 110%,
+      rgba(224, 27, 36, 0.85) 0%,
+      rgba(122, 0, 0, 0.6) 42%,
+      transparent 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Noise / grain overlay via inline SVG turbulence */
+.pullup-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* CTA button */
+.pullup-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  background-color: white;
+  color: #0a0a0a;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.pullup-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.04);
+  box-shadow: 0 0 30px rgba(224, 27, 36, 0.25);
+}
+
+/* ─── Mobile Responsive ──────────────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .pullup-card {
+    padding: 3.5rem 1.25rem;
+    border-radius: 1.25rem;
+  }
 }
