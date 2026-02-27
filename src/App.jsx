@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Rules from './pages/Rules';
 import PullUpCTA from './components/PullUpCTA';
+import { Analytics } from '@vercel/analytics/react';
 
 function Navigation() {
   const location = useLocation();
@@ -148,6 +149,7 @@ function App() {
         </main>
 
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );
