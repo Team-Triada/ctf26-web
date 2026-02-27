@@ -7,6 +7,7 @@ import About from './pages/About';
 import Rules from './pages/Rules';
 import PullUpCTA from './components/PullUpCTA';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 function Navigation() {
   const location = useLocation();
@@ -150,6 +151,7 @@ function App() {
 
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </div>
     </Router>
   );
