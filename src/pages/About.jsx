@@ -28,6 +28,10 @@ export default function About() {
                     <motion.p variants={fadeInUp} className="text-base text-white/50 font-light leading-relaxed">
                         A 24-hour offline cybersecurity competition designed for students passionate about ethical hacking, problem solving, and hands-on security challenges.
                     </motion.p>
+                    <motion.div variants={fadeInUp} className="flex items-center gap-3 mt-5">
+                        <span className="text-sm tracking-[0.2em] uppercase text-white/40">Hosted at</span>
+                        <img src="sponsor_logos/yenepoya.png" alt="Yenepoya University" className="h-10 md:h-15 w-auto object-contain" />
+                    </motion.div>
                 </div>
 
                 {/* The Experience */}

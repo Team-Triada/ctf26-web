@@ -60,6 +60,8 @@ function Navigation() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* Yenepoya logo */}
+          <img src="sponsor_logos/yenepoya.png" alt="Yenepoya University" className="h-15 md:h-25 w-auto object-contain" />
           {/* Hamburger — mobile only */}
           <button onClick={() => setMobileOpen(o => !o)}
             className="md:hidden p-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl text-white/70 hover:text-white transition-colors">
@@ -100,15 +102,18 @@ function ScrollToTop() {
 function Footer() {
   return (
     <footer className="border-t border-white/[0.07] py-8 px-5 md:px-10 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div className="max-w-6xl mx-auto flex flex-col gap-5 sm:flex-row sm:justify-between sm:items-center sm:gap-4">
         <div className="flex items-center gap-2.5">
           <Terminal className="text-red-600 w-4 h-4 opacity-60" />
           <span className="text-white/40 text-xs tracking-widest uppercase">TRIADA CTF '26</span>
         </div>
-        <p className="text-white/30 text-xs tracking-wider">Hack. Break. Learn. Compete.</p>
+        <div className="flex items-center gap-3 text-white/40 text-sm tracking-wider">
+          <span>Hosted at</span>
+          <img src="sponsor_logos/yenepoya.png" alt="Yenepoya University" className="h-10 md:h-15 w-auto object-contain" />
+        </div>
         <div className="flex gap-5 text-xs text-white/30">
           <a href="https://ctf.triada.in" className="hover:text-white/60 transition-colors">Past Edition ('25)</a>
-          <a href="#" className="hover:text-white/60 transition-colors">Contact</a>
+          <a href="mailto:triadactf@gmail.com" className="hover:text-white/60 transition-colors">Contact</a>
         </div>
       </div>
     </footer>

@@ -30,20 +30,28 @@ export default function Home() {
                         <span className="text-red-500" style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>Triada</span> CTF '26
                     </motion.h1>
 
-                    <motion.p variants={fadeInUp} className="text-base md:text-lg text-white/50 max-w-md mx-auto mb-10 font-light leading-relaxed">
+                    <motion.p variants={fadeInUp} className="text-sm md:text-lg text-white/50 max-w-md mx-auto mb-8 md:mb-10 font-light leading-relaxed">
                         A 24-hour offline Capture The Flag competition. Solo & Team-based. Skill-first. No gimmicks.
                     </motion.p>
 
                     {/* Meta pills */}
-                    <motion.div variants={fadeInUp} className="flex flex-wrap gap-2.5 justify-center items-center">
-                        <div className="inline-flex items-center gap-2 text-sm leading-none border border-white/[0.08] bg-white/[0.03] px-5 py-2.5 rounded-full text-white/60">
+                    <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row flex-wrap gap-2.5 justify-center items-center">
+                        <div className="inline-flex items-center gap-2 text-xs sm:text-sm leading-none border border-white/[0.08] bg-white/[0.03] px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-white/60">
                             <Calendar className="w-3 h-3 text-red-400/80 flex-shrink-0" />
-                            <span>5th – 6th April 2026</span>
+                            <span>6th – 7th April 2026</span>
                         </div>
-                        <div className="inline-flex items-center gap-2 text-sm leading-none border border-white/[0.08] bg-white/[0.03] px-5 py-2.5 rounded-full text-white/60">
-                            <MapPin className="w-3 h-3 text-red-400/80 flex-shrink-0" />
+                        <div className="inline-flex items-center gap-2 text-xs sm:text-sm leading-none border border-green-500/20 bg-green-500/5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-green-400">
+                            <img src="sponsor_logos/yenepoya.png" alt="Yenepoya University" className="h-6 w-auto object-contain" />
                             <span>Yenepoya University, Bangalore</span>
                         </div>
+                    </motion.div>
+
+                    {/* Register CTA */}
+                    <motion.div variants={fadeInUp} className="mt-10">
+                        <a href="mailto:triadactf@gmail.com"
+                            className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white hover:bg-white/90 text-black text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.2)]">
+                            Register Now
+                        </a>
                     </motion.div>
                 </motion.div>
             </section>
@@ -94,29 +102,52 @@ export default function Home() {
             {/* Sponsors Section */}
             <section id="sponsors" className="py-20 px-5 md:px-10">
                 <div className="max-w-5xl mx-auto">
-                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-12">
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-16">
                         <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-2">Backed by</p>
                         <h2 className="text-white">Sponsors & Partners</h2>
                     </motion.div>
 
-                    <motion.div
-                        initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}
-                        className="flex flex-wrap justify-start items-center gap-8 md:gap-16"
-                    >
-                        {[
-                            { name: "Ottersec", src: "sponsor_logos/ottersec.png" },
-                            { name: "Lorikeet", src: "sponsor_logos/lorikeet.png" },
-                            { name: "Offsec", src: "sponsor_logos/offsec.svg" },
-                            { name: "Hackviser", src: "sponsor_logos/hackviser.svg" },
-                        ].map((sponsor, i) => (
-                            <motion.img
-                                key={i}
-                                variants={fadeInUp}
-                                src={sponsor.src}
-                                alt={sponsor.name}
-                                className="max-h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105 opacity-50 hover:opacity-90"
-                            />
-                        ))}
+                    {/* Prize Money Sponsor */}
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+                        className="mb-12">
+                        <p className="text-sm tracking-[0.3em] uppercase text-red-400/80 mb-5 font-medium">Prize Money Sponsor</p>
+                        <img src="sponsor_logos/ottersec.png" alt="OtterSec" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-500" />
+                    </motion.div>
+
+                    {/* Gold + Merchandise Sponsors — side by side */}
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}
+                        className="grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-16 mb-14">
+                        {/* Gold Sponsor */}
+                        <motion.div variants={fadeInUp}>
+                            <p className="text-sm tracking-[0.3em] uppercase text-amber-400/80 mb-5 font-medium">Gold Sponsor</p>
+                            <img src="sponsor_logos/lorikeet.png" alt="Lorikeet Sec" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-500" />
+                        </motion.div>
+                        {/* Merchandise Sponsor */}
+                        <motion.div variants={fadeInUp}>
+                            <p className="text-sm tracking-[0.3em] uppercase text-white/50 mb-5 font-medium">Merchandise Sponsor</p>
+                            <img src="sponsor_logos/black_perl.png" alt="BlackPerl" className="max-h-20 md:max-h-22 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-500" />
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Support Sponsors */}
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
+                        <p className="text-sm tracking-[0.3em] uppercase text-white/40 mb-7 font-medium">Support Sponsors</p>
+                        <div className="flex flex-wrap items-center gap-10 md:gap-16">
+                            {[
+                                { name: "Offsec", src: "sponsor_logos/offsec.svg" },
+                                { name: "Hackviser", src: "sponsor_logos/hackviser.svg" },
+                                { name: "KnightSquad", src: "sponsor_logos/knightsquad.png" },
+                                { name: "XYZ", src: "sponsor_logos/xyz-logo-white_1.png" },
+                            ].map((sponsor, i) => (
+                                <motion.img
+                                    key={i}
+                                    variants={fadeInUp}
+                                    src={sponsor.src}
+                                    alt={sponsor.name}
+                                    className="max-h-8 md:max-h-9 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105 opacity-45 hover:opacity-80"
+                                />
+                            ))}
+                        </div>
                     </motion.div>
                 </div>
             </section>

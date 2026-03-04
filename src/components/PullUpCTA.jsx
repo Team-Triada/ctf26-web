@@ -29,7 +29,13 @@ export default function PullUpCTA() {
                         Prove your skills at the biggest offline CTF of 2026.
                     </p>
 
-
+                    <div className="pt-2">
+                        <a href="mailto:triadactf@gmail.com"
+                            className="inline-flex items-center gap-2.5 px-7 py-2.5 bg-white text-black rounded-full text-sm hover:bg-white/90 transition-all duration-300 font-medium tracking-wide"
+                            style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>
+                            Register Now
+                        </a>
+                    </div>
                 </div>
             </motion.div>
         </section>
