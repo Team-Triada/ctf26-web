@@ -1,6 +1,83 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Shield, MapPin, Users } from 'lucide-react';
+import SponsorModal from '../components/SponsorModal';
+
+// ─── Sponsor data ──────────────────────────────────────────────────────────────
+const SPONSORS = {
+    prize: {
+        key: 'ottersec',
+        name: 'OtterSec',
+        logo: 'sponsor_logos/ottersec.png',
+        tier: 'Prize Money Sponsor',
+        tierColor: '#ef4444',
+        website: 'https://osec.io',
+        description:
+            'OtterSec is a leading blockchain security firm specialising in smart-contract audits, penetration testing, and cutting-edge cryptography research. They are proud title sponsor of the prize pool for Triada CTF \'26.',
+    },
+    gold: {
+        key: 'lorikeet',
+        name: 'Lorikeet Sec',
+        logo: 'sponsor_logos/lorikeet.png',
+        tier: 'Gold Sponsor',
+        tierColor: '#f59e0b',
+        website: 'https://lorikeetsecurity.com',
+        description:
+            'Lorikeet Sec is an offensive-security consultancy focused on red teaming, vulnerability research, and building tomorrow\'s security talent through community events.',
+    },
+    merch: {
+        key: 'blackperl',
+        name: 'BlackPerl',
+        logo: 'sponsor_logos/black_perl.png',
+        tier: 'Merchandise Sponsor',
+        tierColor: '#a3a3a3',
+        website: 'https://blackperldfir.com',
+        description:
+            'BlackPerl is a cybersecurity training and certification platform that empowers aspiring professionals with hands-on labs, curated learning paths, and industry-recognised credentials.',
+    },
+    support: [
+        {
+            key: 'offsec',
+            name: 'OffSec',
+            logo: 'sponsor_logos/offsec.svg',
+            tier: 'Support Sponsor',
+            tierColor: '#a3a3a3',
+            website: 'https://www.offsec.com',
+            description:
+                'OffSec (Offensive Security) is the organisation behind OSCP and Kali Linux. They provide industry-leading cybersecurity training and certifications trusted worldwide.',
+        },
+        {
+            key: 'hackviser',
+            name: 'Hackviser',
+            logo: 'sponsor_logos/hackviser.svg',
+            tier: 'Support Sponsor',
+            tierColor: '#a3a3a3',
+            website: 'https://hackviser.com',
+            description:
+                'Hackviser is a hands-on hacking platform offering realistic lab environments for CTF players, security students, and professionals to sharpen their offensive and defensive skills.',
+        },
+        {
+            key: 'knightsquad',
+            name: 'KnightSquad',
+            logo: 'sponsor_logos/knightsquad.png',
+            tier: 'Support Sponsor',
+            tierColor: '#a3a3a3',
+            website: 'https://knightsquad.org',
+            description:
+                'KnightSquad is a cybersecurity community and training collective dedicated to nurturing the next generation of ethical hackers through workshops, competitions, and peer learning.',
+        },
+        {
+            key: 'xyz',
+            name: 'XYZ',
+            logo: 'sponsor_logos/xyz-logo-white_1.png',
+            tier: 'Support Sponsor',
+            tierColor: '#a3a3a3',
+            website: 'https://gen.xyz',
+            description:
+                'XYZ is a leading domain registry powering the open internet with affordable, memorable .xyz domains — trusted by millions of websites and projects around the world.',
+        },
+    ],
+};
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 24 },
@@ -13,6 +90,7 @@ const staggerContainer = {
 };
 
 export default function Home() {
+    const [activeSponsor, setActiveSponsor] = useState(null);
     useEffect(() => { document.title = "TRIADA CTF '26 — 24-Hour Offline Capture The Flag Competition | April 2026"; }, []);
     return (
         <>
@@ -111,7 +189,10 @@ export default function Home() {
                     <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
                         className="mb-12">
                         <p className="text-sm tracking-[0.3em] uppercase text-red-400/80 mb-5 font-medium">Prize Money Sponsor</p>
-                        <img src="sponsor_logos/ottersec.png" alt="OtterSec" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-500" />
+                        <button onClick={() => setActiveSponsor(SPONSORS.prize)} className="focus:outline-none group text-left" aria-label="View OtterSec details">
+                            <img src="sponsor_logos/ottersec.png" alt="OtterSec" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                            <p className="mt-2 text-[10px] text-white/25 tracking-widest uppercase group-hover:text-white/50 transition-colors">Click for details</p>
+                        </button>
                     </motion.div>
 
                     {/* Gold + Merchandise Sponsors — side by side */}
@@ -120,12 +201,18 @@ export default function Home() {
                         {/* Gold Sponsor */}
                         <motion.div variants={fadeInUp}>
                             <p className="text-sm tracking-[0.3em] uppercase text-amber-400/80 mb-5 font-medium">Gold Sponsor</p>
-                            <img src="sponsor_logos/lorikeet.png" alt="Lorikeet Sec" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-500" />
+                            <button onClick={() => setActiveSponsor(SPONSORS.gold)} className="focus:outline-none group text-left" aria-label="View Lorikeet Sec details">
+                                <img src="sponsor_logos/lorikeet.png" alt="Lorikeet Sec" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                                <p className="mt-2 text-[10px] text-white/25 tracking-widest uppercase group-hover:text-white/50 transition-colors">Click for details</p>
+                            </button>
                         </motion.div>
                         {/* Merchandise Sponsor */}
                         <motion.div variants={fadeInUp}>
                             <p className="text-sm tracking-[0.3em] uppercase text-white/50 mb-5 font-medium">Merchandise Sponsor</p>
-                            <img src="sponsor_logos/black_perl.png" alt="BlackPerl" className="max-h-20 md:max-h-22 w-auto object-contain opacity-85 hover:opacity-100 transition-opacity duration-500" />
+                            <button onClick={() => setActiveSponsor(SPONSORS.merch)} className="focus:outline-none group text-left" aria-label="View BlackPerl details">
+                                <img src="sponsor_logos/black_perl.png" alt="BlackPerl" className="max-h-20 md:max-h-22 w-auto object-contain opacity-85 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                                <p className="mt-2 text-[10px] text-white/25 tracking-widest uppercase group-hover:text-white/50 transition-colors">Click for details</p>
+                            </button>
                         </motion.div>
                     </motion.div>
 
@@ -133,24 +220,30 @@ export default function Home() {
                     <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
                         <p className="text-sm tracking-[0.3em] uppercase text-white/40 mb-7 font-medium">Support Sponsors</p>
                         <div className="flex flex-wrap items-center gap-10 md:gap-16">
-                            {[
-                                { name: "Offsec", src: "sponsor_logos/offsec.svg" },
-                                { name: "Hackviser", src: "sponsor_logos/hackviser.svg" },
-                                { name: "KnightSquad", src: "sponsor_logos/knightsquad.png" },
-                                { name: "XYZ", src: "sponsor_logos/xyz-logo-white_1.png" },
-                            ].map((sponsor, i) => (
-                                <motion.img
+                            {SPONSORS.support.map((sponsor, i) => (
+                                <motion.button
                                     key={i}
                                     variants={fadeInUp}
-                                    src={sponsor.src}
-                                    alt={sponsor.name}
-                                    className="max-h-8 md:max-h-9 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-500 hover:scale-105 opacity-45 hover:opacity-80"
-                                />
+                                    onClick={() => setActiveSponsor(sponsor)}
+                                    className="focus:outline-none group"
+                                    aria-label={`View ${sponsor.name} details`}
+                                >
+                                    <img
+                                        src={sponsor.logo}
+                                        alt={sponsor.name}
+                                        className="max-h-8 md:max-h-9 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105 opacity-45 group-hover:opacity-80"
+                                    />
+                                </motion.button>
                             ))}
                         </div>
                     </motion.div>
                 </div>
             </section>
+
+            {/* Sponsor Modal */}
+            {activeSponsor && (
+                <SponsorModal sponsor={activeSponsor} onClose={() => setActiveSponsor(null)} />
+            )}
         </>
     );
 }
