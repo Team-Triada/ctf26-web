@@ -62,7 +62,7 @@ const SPONSORS = {
             logo: 'sponsor_logos/knightsquad.png',
             tier: 'Support Sponsor',
             tierColor: '#a3a3a3',
-            website: 'https://knightsquad.org',
+            website: 'https://knightsquad.academy/',
             description:
                 'KnightSquad is a cybersecurity community and training collective dedicated to nurturing the next generation of ethical hackers through workshops, competitions, and peer learning.',
         },
