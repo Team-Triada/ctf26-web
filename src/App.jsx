@@ -5,6 +5,7 @@ import { Terminal, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Rules from './pages/Rules';
+import Registration from './pages/Registration';
 import PullUpCTA from './components/PullUpCTA';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -32,6 +33,7 @@ function Navigation() {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/rules', label: 'Rules' },
+    { to: '/register', label: 'Register' },
   ];
 
   return (
@@ -150,6 +152,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/rules" element={<Rules />} />
+            <Route path="/register" element={<Registration />} />
           </Routes>
           <PullUpCTA />
         </main>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, Shield, MapPin, Users } from 'lucide-react';
 import SponsorModal from '../components/SponsorModal';
 
@@ -76,6 +77,16 @@ const SPONSORS = {
             description:
                 'XYZ is a leading domain registry powering the open internet with affordable, memorable .xyz domains — trusted by millions of websites and projects around the world.',
         },
+        {
+            key: 'hackerdna',
+            name: 'HackerDNA',
+            logo: 'sponsor_logos/hackerdna.svg',
+            tier: 'Support Sponsor',
+            tierColor: '#a3a3a3',
+            website: 'https://hackerdna.com',
+            description:
+                'HackerDNA is a cybersecurity learning platform providing practical environments and pro memberships for aspiring cybersecurity professionals.',
+        },
     ],
 };
 
@@ -126,10 +137,10 @@ export default function Home() {
 
                     {/* Register CTA */}
                     <motion.div variants={fadeInUp} className="mt-10">
-                        <a href="mailto:triadactf@gmail.com"
+                        <Link to="/register"
                             className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white hover:bg-white/90 text-black text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.2)]">
                             Register Now
-                        </a>
+                        </Link>
                     </motion.div>
                 </motion.div>
             </section>
