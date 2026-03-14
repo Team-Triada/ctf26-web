@@ -55,15 +55,15 @@ export default function Prizes() {
                     </motion.div>
                     <motion.div variants={fadeInUp} className="bg-white/[0.02] border border-white/[0.07] p-6 rounded-[1.5rem] text-center">
                         <Trophy className="w-8 h-8 text-amber-400 mx-auto mb-2" />
-                        <p className="text-sm text-white/70">Top 3 Teams<br/>Main Prizes</p>
+                        <p className="text-sm text-white/70">Top 3 Teams<br />Main Prizes</p>
                     </motion.div>
                     <motion.div variants={fadeInUp} className="bg-white/[0.02] border border-white/[0.07] p-6 rounded-[1.5rem] text-center">
                         <Award className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                        <p className="text-sm text-white/70">Individual Awards<br/>Extra Recognition</p>
+                        <p className="text-sm text-white/70">Individual Awards<br />Extra Recognition</p>
                     </motion.div>
                     <motion.div variants={fadeInUp} className="bg-white/[0.02] border border-white/[0.07] p-6 rounded-[1.5rem] text-center">
                         <Globe className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                        <p className="text-sm text-white/70">Global Sponsors<br/>Backing TRIADA</p>
+                        <p className="text-sm text-white/70">Global Sponsors<br />Backing TRIADA</p>
                     </motion.div>
                 </motion.div>
 
@@ -84,13 +84,13 @@ export default function Prizes() {
                                 <div className="text-2xl font-bold text-amber-400">Worth ₹1,58,547+</div>
                             </div>
                             <ul className="space-y-3 mb-6">
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">₹10,000 Cash</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">2× HackerDNA Pro Memberships</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">2× OffSec Proving Grounds Practice Subscriptions</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">2× kWAPTA Exam Vouchers</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">2× 1-Year .xyz Domains</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">BCSA + 2 Years of Pwndora Access</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0"/> <span><strong className="text-white">2× CASA Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">₹10,000 Cash</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× HackerDNA Pro Memberships</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× OffSec Proving Grounds Practice Subscriptions</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× kWAPTA Exam Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× 1-Year .xyz Domains</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">BCSA + 2 Years of Pwndora Access</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× CASA Vouchers</strong></span></li>
                             </ul>
                             <div className="flex flex-wrap gap-2 justify-center">
                                 <span className="px-2 py-1 bg-white/10 text-xs text-white/60 rounded-full">OtterSec</span>
@@ -111,12 +111,12 @@ export default function Prizes() {
                                 <div className="text-xl font-bold text-gray-300">Worth ₹1,31,647+</div>
                             </div>
                             <ul className="space-y-3 mb-6">
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">₹6,000 Cash</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">2× OffSec Proving Grounds Practice Subscriptions</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">2× kWAPTA Exam Vouchers</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">2× 1-Year .xyz Domains</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">BCSA + 1 Year of Pwndora Access</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">2× ACP Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">₹6,000 Cash</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× OffSec Proving Grounds Practice Subscriptions</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× kWAPTA Exam Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× 1-Year .xyz Domains</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">BCSA + 1 Year of Pwndora Access</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× ACP Vouchers</strong></span></li>
                             </ul>
                             <div className="flex flex-wrap gap-2 justify-center">
                                 <span className="px-2 py-1 bg-white/10 text-xs text-white/60 rounded-full">OtterSec</span>
@@ -136,12 +136,12 @@ export default function Prizes() {
                                 <div className="text-xl font-bold text-amber-600">Worth ₹85,400+</div>
                             </div>
                             <ul className="space-y-3 mb-6">
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">₹4,000 Cash</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">1× OffSec Proving Grounds Practice Subscription</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">1× kWAPTA Exam Voucher</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">1× 1-Year .xyz Domain</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">BCSA + 1 Year of Pwndora Access</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0"/> <span><strong className="text-white/90">2× APU+ Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">₹4,000 Cash</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× OffSec Proving Grounds Practice Subscriptions</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× kWAPTA Exam Voucher</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× 1-Year .xyz Domains</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">1 Year of Pwndora Access</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× APU+ Vouchers</strong></span></li>
                             </ul>
                             <div className="flex flex-wrap gap-2 justify-center">
                                 <span className="px-2 py-1 bg-white/10 text-xs text-white/60 rounded-full">OtterSec</span>
