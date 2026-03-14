@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Rules from './pages/Rules';
 import Registration from './pages/Registration';
+import Prizes from './pages/Prizes';
 import PullUpCTA from './components/PullUpCTA';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/react';
@@ -33,6 +34,7 @@ function Navigation() {
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
     { to: '/rules', label: 'Rules' },
+    { to: '/prizes', label: 'Prizes' },
     { to: '/register', label: 'Register' },
   ];
 
@@ -152,6 +154,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/rules" element={<Rules />} />
+            <Route path="/prizes" element={<Prizes />} />
             <Route path="/register" element={<Registration />} />
           </Routes>
           <PullUpCTA />

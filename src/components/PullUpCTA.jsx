@@ -30,7 +30,7 @@ export default function PullUpCTA() {
                     </p>
 
                     <div className="pt-2">
-                        <a href="mailto:triadactf@gmail.com"
+                        <a href="https://forms.gle/Xz2Dc87ih3iD6zmKA"
                             className="inline-flex items-center gap-2.5 px-7 py-2.5 bg-white text-black rounded-full text-sm hover:bg-white/90 transition-all duration-300 font-medium tracking-wide"
                             style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>
                             Register Now

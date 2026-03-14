@@ -36,6 +36,16 @@ const SPONSORS = {
         description:
             'BlackPerl is a cybersecurity training and certification platform that empowers aspiring professionals with hands-on labs, curated learning paths, and industry-recognised credentials.',
     },
+    learning: {
+        key: 'apisec',
+        name: 'APIsec University',
+        logo: 'sponsor_logos/apisec.png',
+        tier: 'Learning Partner',
+        tierColor: '#10b981',
+        website: 'https://www.apisecuniversity.com/',
+        description:
+            'APIsec University provides world-class API security and cybersecurity training to over 100,000 students worldwide.',
+    },
     support: [
         {
             key: 'offsec',
@@ -80,7 +90,7 @@ const SPONSORS = {
         {
             key: 'hackerdna',
             name: 'HackerDNA',
-            logo: 'sponsor_logos/hackerdna.svg',
+            logo: 'sponsor_logos/hackerdna.png',
             tier: 'Support Sponsor',
             tierColor: '#a3a3a3',
             website: 'https://hackerdna.com',
@@ -115,6 +125,12 @@ export default function Home() {
                         </span>
                     </motion.div>
 
+                    <motion.div variants={fadeInUp} className="mb-6 flex justify-center">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 border border-amber-500/30 rounded-full text-xs tracking-[0.2em] text-amber-400 uppercase bg-amber-500/5">
+                            Total Prizepool Worth ₹4,30,000+
+                        </span>
+                    </motion.div>
+
                     <motion.h1 variants={fadeInUp} className="text-white mb-4">
                         <span className="text-red-500" style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>Triada</span> CTF '26
                     </motion.h1>
@@ -137,10 +153,10 @@ export default function Home() {
 
                     {/* Register CTA */}
                     <motion.div variants={fadeInUp} className="mt-10">
-                        <Link to="/register"
+                        <a href="https://forms.gle/Xz2Dc87ih3iD6zmKA"
                             className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white hover:bg-white/90 text-black text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.2)]">
                             Register Now
-                        </Link>
+                        </a>
                     </motion.div>
                 </motion.div>
             </section>
@@ -227,6 +243,16 @@ export default function Home() {
                         </motion.div>
                     </motion.div>
 
+                    {/* Learning Partner */}
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+                        className="mb-12">
+                        <p className="text-sm tracking-[0.3em] uppercase text-green-400/80 mb-5 font-medium">Learning Partner</p>
+                        <button onClick={() => setActiveSponsor(SPONSORS.learning)} className="focus:outline-none group text-left" aria-label="View APIsec University details">
+                            <img src="sponsor_logos/apisec.png" alt="APIsec University" className="max-h-16 md:max-h-18 w-auto object-contain opacity-85 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105" />
+                            <p className="mt-2 text-[10px] text-white/25 tracking-widest uppercase group-hover:text-white/50 transition-colors">Click for details</p>
+                        </button>
+                    </motion.div>
+
                     {/* Support Sponsors */}
                     <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
                         <p className="text-sm tracking-[0.3em] uppercase text-white/40 mb-7 font-medium">Support Sponsors</p>
@@ -242,7 +268,7 @@ export default function Home() {
                                     <img
                                         src={sponsor.logo}
                                         alt={sponsor.name}
-                                        className="max-h-8 md:max-h-9 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105 opacity-45 group-hover:opacity-80"
+                                        className={`w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105 opacity-45 group-hover:opacity-80 ${sponsor.key === 'hackerdna' ? 'max-h-10 md:max-h-11' : 'max-h-8 md:max-h-9'}`}
                                     />
                                 </motion.button>
                             ))}
