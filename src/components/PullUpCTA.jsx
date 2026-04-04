@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import CountdownTimer from './CountdownTimer';
 
 export default function PullUpCTA() {
     return (
@@ -29,12 +30,12 @@ export default function PullUpCTA() {
                         Prove your skills at the biggest offline CTF of 2026.
                     </p>
 
-                    <div className="pt-2">
-                        <a href="https://forms.gle/Xz2Dc87ih3iD6zmKA"
-                            className="inline-flex items-center gap-2.5 px-7 py-2.5 bg-white text-black rounded-full text-sm hover:bg-white/90 transition-all duration-300 font-medium tracking-wide"
-                            style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>
-                            Register Now
-                        </a>
+                    <div className="pt-2 flex flex-col items-center gap-4">
+                        <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/5 border border-white/15 text-white/60 rounded-full text-sm font-medium tracking-wide cursor-not-allowed select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                            Registration Closed
+                        </span>
+                        <CountdownTimer />
                     </div>
                 </div>
             </motion.div>

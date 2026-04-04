@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Trophy, Award, Users, Globe, CheckCircle2 } from 'lucide-react';
+import CountdownTimer from '../components/CountdownTimer';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 24 },
@@ -35,15 +36,18 @@ export default function Prizes() {
                         Rewarding the top teams and standout performers of the biggest offline CTF experience of 2026.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="https://forms.gle/Xz2Dc87ih3iD6zmKA"
-                            className="inline-flex items-center gap-2 px-8 py-3 bg-white hover:bg-white/90 text-black text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.2)]">
-                            Register Now
-                        </a>
-                        <Link to="/rules"
-                            className="inline-flex items-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-1">
-                            View Rules
-                        </Link>
+                    <div className="flex flex-col items-center gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <span className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-white/15 text-white/60 text-sm font-medium tracking-[0.1em] uppercase rounded-full cursor-not-allowed select-none">
+                                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                                Registration Closed
+                            </span>
+                            <Link to="/rules"
+                                className="inline-flex items-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-1">
+                                View Rules
+                            </Link>
+                        </div>
+                        <CountdownTimer />
                     </div>
                 </motion.div>
 
@@ -90,7 +94,7 @@ export default function Prizes() {
                                 <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× kWAPTA Exam Vouchers</strong></span></li>
                                 <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× 1-Year .xyz Domains</strong></span></li>
                                 <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">BCSA + 2 Years of Pwndora Access</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× CASA Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/80"><CheckCircle2 className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">2× ACP Vouchers</strong></span></li>
                             </ul>
                             <div className="flex flex-wrap gap-2 justify-center">
                                 <span className="px-2 py-1 bg-white/10 text-xs text-white/60 rounded-full">OtterSec</span>
@@ -116,7 +120,7 @@ export default function Prizes() {
                                 <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× kWAPTA Exam Vouchers</strong></span></li>
                                 <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× 1-Year .xyz Domains</strong></span></li>
                                 <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">BCSA + 1 Year of Pwndora Access</strong></span></li>
-                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× ACP Vouchers</strong></span></li>
+                                <li className="flex gap-3 text-sm text-white/70"><CheckCircle2 className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" /> <span><strong className="text-white/90">2× CASA Vouchers</strong></span></li>
                             </ul>
                             <div className="flex flex-wrap gap-2 justify-center">
                                 <span className="px-2 py-1 bg-white/10 text-xs text-white/60 rounded-full">OtterSec</span>

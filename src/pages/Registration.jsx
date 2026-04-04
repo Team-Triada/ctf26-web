@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, MapPin, Shield, CheckCircle2, AlertTriangle, ExternalLink } from 'lucide-react';
+import { Clock, MapPin, Shield, CheckCircle2, AlertTriangle } from 'lucide-react';
+import CountdownTimer from '../components/CountdownTimer';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 24 },
@@ -77,12 +78,13 @@ export default function Registration() {
 
                 {/* Call to action */}
                 <motion.div variants={fadeInUp} className="flex justify-center mb-20 text-center">
-                    <div>
-                        <a href="https://forms.gle/Xz2Dc87ih3iD6zmKA" target="_blank" rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-8 py-4 bg-white hover:bg-white/90 text-black text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.2)]">
-                            Register Now <ExternalLink className="w-4 h-4" />
-                        </a>
-                        <p className="mt-4 text-[10px] text-white/40 tracking-wider">REGISTRATIONS ARE OPEN FOR EXTERNAL PARTICIPANTS</p>
+                    <div className="flex flex-col items-center gap-5">
+                        <span className="inline-flex items-center gap-2.5 px-8 py-4 bg-white/5 border border-white/15 text-white/60 text-sm font-medium tracking-[0.1em] uppercase rounded-full cursor-not-allowed select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                            Registration Closed
+                        </span>
+                        <CountdownTimer />
+                        <p className="text-[10px] text-white/30 tracking-wider">REGISTRATIONS ARE CLOSED</p>
                     </div>
                 </motion.div>
 

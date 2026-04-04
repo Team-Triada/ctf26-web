@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Shield, MapPin, Users } from 'lucide-react';
 import SponsorModal from '../components/SponsorModal';
+import CountdownTimer from '../components/CountdownTimer';
 
 // ─── Sponsor data ──────────────────────────────────────────────────────────────
 const SPONSORS = {
@@ -152,11 +153,12 @@ export default function Home() {
                     </motion.div>
 
                     {/* Register CTA */}
-                    <motion.div variants={fadeInUp} className="mt-10">
-                        <a href="https://forms.gle/Xz2Dc87ih3iD6zmKA"
-                            className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white hover:bg-white/90 text-black text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_rgba(255,255,255,0.2)]">
-                            Register Now
-                        </a>
+                    <motion.div variants={fadeInUp} className="mt-10 flex flex-col items-center gap-4">
+                        <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white/5 border border-white/15 text-white/60 text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full cursor-not-allowed select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                            Registration Closed
+                        </span>
+                        <CountdownTimer />
                     </motion.div>
                 </motion.div>
             </section>
