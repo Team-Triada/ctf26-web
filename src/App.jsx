@@ -5,7 +5,7 @@ import { Terminal, Menu, X } from 'lucide-react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Rules from './pages/Rules';
-import Registration from './pages/Registration';
+import Schedule from './pages/Schedule';
 import Prizes from './pages/Prizes';
 import PullUpCTA from './components/PullUpCTA';
 import { Analytics } from '@vercel/analytics/react';
@@ -35,7 +35,7 @@ function Navigation() {
     { to: '/about', label: 'About' },
     { to: '/rules', label: 'Rules' },
     { to: '/prizes', label: 'Prizes' },
-    { to: '/register', label: 'Register' },
+    { to: '/schedule', label: 'Schedule' },
   ];
 
   return (
@@ -155,7 +155,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/rules" element={<Rules />} />
             <Route path="/prizes" element={<Prizes />} />
-            <Route path="/register" element={<Registration />} />
+            <Route path="/schedule" element={<Schedule />} />
           </Routes>
           <PullUpCTA />
         </main>
