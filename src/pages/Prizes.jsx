@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Trophy, Award, Users, Globe, CheckCircle2 } from 'lucide-react';
-import CountdownTimer from '../components/CountdownTimer';
+
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 24 },
@@ -37,17 +37,10 @@ export default function Prizes() {
                     </p>
 
                     <div className="flex flex-col items-center gap-4">
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <span className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-white/15 text-white/60 text-sm font-medium tracking-[0.1em] uppercase rounded-full cursor-not-allowed select-none">
-                                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                                Registration Closed
-                            </span>
-                            <Link to="/rules"
-                                className="inline-flex items-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white text-sm font-medium tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:-translate-y-1">
-                                View Rules
-                            </Link>
-                        </div>
-                        <CountdownTimer />
+                        <span className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-green-500/30 text-green-400 text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            CTF is Live
+                        </span>
                     </div>
                 </motion.div>
 

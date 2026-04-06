@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, MapPin, Shield, CheckCircle2, AlertTriangle } from 'lucide-react';
-import CountdownTimer from '../components/CountdownTimer';
+
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 24 },
@@ -79,12 +79,10 @@ export default function Registration() {
                 {/* Call to action */}
                 <motion.div variants={fadeInUp} className="flex justify-center mb-20 text-center">
                     <div className="flex flex-col items-center gap-5">
-                        <span className="inline-flex items-center gap-2.5 px-8 py-4 bg-white/5 border border-white/15 text-white/60 text-sm font-medium tracking-[0.1em] uppercase rounded-full cursor-not-allowed select-none">
-                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                            Registration Closed
+                        <span className="inline-flex items-center gap-2.5 px-8 py-4 bg-white/5 border border-green-500/30 text-green-400 text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            CTF is Live
                         </span>
-                        <CountdownTimer />
-                        <p className="text-[10px] text-white/30 tracking-wider">REGISTRATIONS ARE CLOSED</p>
                     </div>
                 </motion.div>
 

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Shield, MapPin, Users } from 'lucide-react';
 import SponsorModal from '../components/SponsorModal';
-import CountdownTimer from '../components/CountdownTimer';
+
 
 // ─── Sponsor data ──────────────────────────────────────────────────────────────
 const SPONSORS = {
@@ -154,11 +154,10 @@ export default function Home() {
 
                     {/* Register CTA */}
                     <motion.div variants={fadeInUp} className="mt-10 flex flex-col items-center gap-4">
-                        <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white/5 border border-white/15 text-white/60 text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full cursor-not-allowed select-none">
-                            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                            Registration Closed
+                        <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white/5 border border-green-500/30 text-green-400 text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
+                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                            CTF is Live
                         </span>
-                        <CountdownTimer />
                     </motion.div>
                 </motion.div>
             </section>
