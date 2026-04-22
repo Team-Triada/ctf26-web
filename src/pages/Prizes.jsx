@@ -37,9 +37,9 @@ export default function Prizes() {
                     </p>
 
                     <div className="flex flex-col items-center gap-4">
-                        <span className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-green-500/30 text-green-400 text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            CTF is Live
+                        <span className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-red-500/30 text-red-300 text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500" />
+                            Event Concluded
                         </span>
                     </div>
                 </motion.div>

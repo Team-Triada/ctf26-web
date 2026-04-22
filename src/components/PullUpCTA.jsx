@@ -18,22 +18,22 @@ export default function PullUpCTA() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-center text-center gap-6 max-w-xl mx-auto">
                     <p className="text-xs tracking-[0.25em] uppercase text-white/40">
-                        Ready to compete?
+                        It's a wrap!
                     </p>
 
-                    <h2 className="text-white whitespace-nowrap">
+                    <h2 className="text-white">
                         Pull Up to <span className="text-red-500">Triada</span> CTF '26
                     </h2>
 
                     <p className="text-base md:text-lg text-white/50 font-light leading-relaxed max-w-md">
-                        24 hours. Real-world challenges. Solo or Duo teams.
-                        Prove your skills at the biggest offline CTF of 2026.
+                        Thank you for being part of Triada CTF '26.
+                        See you at the next edition with even bigger challenges.
                     </p>
 
                     <div className="pt-2 flex flex-col items-center gap-4">
-                        <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/5 border border-green-500/30 text-green-400 rounded-full text-sm font-medium tracking-wide select-none">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            CTF is Live
+                        <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-white/5 border border-red-500/30 text-red-300 rounded-full text-sm font-medium tracking-wide select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500" />
+                            Event Concluded
                         </span>
                     </div>
                 </div>

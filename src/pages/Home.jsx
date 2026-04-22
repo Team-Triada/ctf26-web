@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { Calendar, Clock, Shield, MapPin, Users } from 'lucide-react';
 import SponsorModal from '../components/SponsorModal';
 
@@ -111,6 +110,53 @@ const staggerContainer = {
     visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
 };
 
+const EVENT_STATS = [
+    { label: 'Participants', value: '125+' },
+    { label: 'Teams', value: '65+' },
+    { label: 'Challenges', value: '45+' },
+    { label: 'Hours', value: '24' },
+    { label: 'Prize Pool', value: 'Rs.4,30,000+' },
+    { label: 'Uptime', value: '100%' },
+    { label: 'Correct Submissions', value: '1,388' },
+    { label: 'Attempts', value: '19,140+' },
+    { label: 'Overall Rating', value: '4.3/5' },
+];
+
+const TESTIMONIALS = [
+    {
+        name: 'Rakshitha',
+        team: 'Rakshitha',
+        quote:
+            'This was a truly enjoyable and educational experience. I hope you keep doing more of these.',
+    },
+    {
+        name: 'Fatir',
+        team: '404',
+        quote:
+            'I learned basics of binary exploitation, cryptography, and improved my problem-solving skills by analyzing and solving complex challenges.',
+    },
+    {
+        name: 'B Chiranthan Reddy',
+        team: 'C A',
+        quote:
+            'I learned cybersecurity from the basics and was able to apply it while finding flags in this CTF.',
+    },
+    {
+        name: 'Aryan Kumar Dalai',
+        team: 'C A',
+        quote:
+            'It was good, and the difficulty level was good as well. Next time, just give us some Red Bull.',
+    },
+    {
+        name: 'Kashyap Dayal',
+        team: 'Chmod77',
+        quote:
+            'A CTF does not have to be complicated with multiple paths. A single difficult path can be equally good.',
+    },
+];
+
+const TESTIMONIALS_MARQUEE = [...TESTIMONIALS, ...TESTIMONIALS];
+
 export default function Home() {
     const [activeSponsor, setActiveSponsor] = useState(null);
     useEffect(() => { document.title = "TRIADA CTF '26 — 24-Hour Offline Capture The Flag Competition | April 2026"; }, []);
@@ -137,7 +183,7 @@ export default function Home() {
                     </motion.h1>
 
                     <motion.p variants={fadeInUp} className="text-sm md:text-lg text-white/50 max-w-md mx-auto mb-8 md:mb-10 font-light leading-relaxed">
-                        A 24-hour offline Capture The Flag competition. Solo & Team-based. Skill-first. No gimmicks.
+                        Triada CTF '26 has concluded successfully. 24 hours of intense problem-solving, learning, and competition.
                     </motion.p>
 
                     {/* Meta pills */}
@@ -154,12 +200,51 @@ export default function Home() {
 
                     {/* Register CTA */}
                     <motion.div variants={fadeInUp} className="mt-10 flex flex-col items-center gap-4">
-                        <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white/5 border border-green-500/30 text-green-400 text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            CTF is Live
+                        <span className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 bg-white/5 border border-red-500/30 text-red-300 text-xs sm:text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500" />
+                            Event Concluded
                         </span>
                     </motion.div>
                 </motion.div>
+            </section>
+
+            {/* By The Numbers */}
+            <section className="py-20 px-5 md:px-10 border-b border-white/[0.07]">
+                <div className="max-w-5xl mx-auto">
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-12 text-center">
+                        <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-2">Triada CTF '26</p>
+                        <h2 className="text-white mb-3">By the Numbers</h2>
+                        <p className="text-sm text-white/50 font-light max-w-2xl mx-auto leading-relaxed">
+                            A snapshot of the scale, performance, and outcomes from this edition.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: '-40px' }}
+                        variants={staggerContainer}
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+                    >
+                        {EVENT_STATS.map((item) => {
+                            const isLongValue = item.value.length >= 10;
+                            return (
+                            <motion.div
+                                key={item.label}
+                                variants={fadeInUp}
+                                className="bg-white/[0.02] border border-white/[0.07] p-6 rounded-[1.5rem] hover:bg-white/[0.04] transition-colors duration-300"
+                            >
+                                <div
+                                    className={`text-red-400 mb-2 tracking-tight leading-[0.95] font-serif ${isLongValue ? 'text-[clamp(1.75rem,8vw,3.2rem)]' : 'text-[clamp(2.5rem,10vw,4.2rem)]'}`}
+                                >
+                                    {item.value}
+                                </div>
+                                <p className="text-sm text-white/55 tracking-wide">{item.label}</p>
+                            </motion.div>
+                            );
+                        })}
+                    </motion.div>
+                </div>
             </section>
 
             {/* Event Highlights Section */}
@@ -201,6 +286,41 @@ export default function Home() {
                                 <p className="text-sm text-white/50 leading-relaxed font-light">{item.desc}</p>
                             </motion.div>
                         ))}
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Participant Feedback */}
+            <section className="py-20 px-5 md:px-10 border-b border-white/[0.07]">
+                <div className="max-w-5xl mx-auto">
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} className="mb-12 text-center">
+                        <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-2">Participant Feedback</p>
+                        <h2 className="text-white mb-3">What Participants Said</h2>
+                        <p className="text-sm text-white/50 font-light max-w-2xl mx-auto leading-relaxed">
+                            Based on post-event participant feedback.
+                        </p>
+                    </motion.div>
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: '-40px' }}
+                        variants={fadeInUp}
+                        className="feedback-marquee-shell"
+                    >
+                        <div className="feedback-marquee-track">
+                            {TESTIMONIALS_MARQUEE.map((item, idx) => (
+                                <article
+                                    key={`${item.name}-${item.team}-${idx}`}
+                                    className="feedback-card"
+                                >
+                                    <p className="text-sm text-white/70 leading-relaxed mb-4">"{item.quote}"</p>
+                                    <p className="text-xs tracking-[0.18em] uppercase text-white/40">
+                                        {item.name} · {item.team}
+                                    </p>
+                                </article>
+                            ))}
+                        </div>
                     </motion.div>
                 </div>
             </section>

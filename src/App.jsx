@@ -118,6 +118,7 @@ function Footer() {
           <img src="sponsor_logos/yenepoya.png" alt="Yenepoya University" className="h-10 md:h-15 w-auto object-contain" />
         </div>
         <div className="flex gap-5 text-xs text-white/30">
+          <span>TRIADA · Triada · triada.in · Bengaluru, India</span>
           <a href="https://ctf.triada.in" className="hover:text-white/60 transition-colors">Past Edition ('25)</a>
           <a href="mailto:triadactf@gmail.com" className="hover:text-white/60 transition-colors">Contact</a>
         </div>

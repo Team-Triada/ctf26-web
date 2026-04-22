@@ -79,9 +79,9 @@ export default function Registration() {
                 {/* Call to action */}
                 <motion.div variants={fadeInUp} className="flex justify-center mb-20 text-center">
                     <div className="flex flex-col items-center gap-5">
-                        <span className="inline-flex items-center gap-2.5 px-8 py-4 bg-white/5 border border-green-500/30 text-green-400 text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            CTF is Live
+                        <span className="inline-flex items-center gap-2.5 px-8 py-4 bg-white/5 border border-red-500/30 text-red-300 text-sm font-medium tracking-[0.1em] uppercase rounded-full select-none">
+                            <span className="w-2 h-2 rounded-full bg-red-500" />
+                            Event Concluded
                         </span>
                     </div>
                 </motion.div>
